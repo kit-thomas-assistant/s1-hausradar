@@ -85,8 +85,14 @@ class PipelineTests(unittest.TestCase):
     def test_plot_below_required_garden_is_rejected(self):
         self.assertIsNone(u.parse_detail(PAGE.replace('540 m² Grundstücksfläche', '220 m² Grundstücksfläche'), URL))
 
+    def test_optional_rooms_and_construction_year_require_source_evidence(self):
+        record = u.parse_detail(PAGE.replace('125 m² Wohnfläche', '7 Zimmer 125 m² Wohnfläche Baujahr 1933'), URL)
+        self.assertEqual((record['rooms'], record['year_built']), (7, 1933))
+        record = u.parse_detail(PAGE.replace('125 m² Wohnfläche', '125 m² Wohnfläche 7 Zimmer 124 m² Wohnfläche'), URL)
+        self.assertIsNone(record['rooms'])
+
     def test_manual_source_untouched(self):
-        manual = {'id':'sparkasse-FID-F14-176-636','url':'https://immobilien.sparkasse.de/expose/FID-F14-176-636.html','source':'Sparkassen-Immobilien','status':'candidate','first_seen':'2026-11-08','last_seen':'2026-11-08'}
+        manual = {'id':'sparkasse-FID-F14-176-636','url':'https://immobilien.sparkasse.de/expose/FID-F14-176-636.html','source':'Sparkassen-Immobilien','status':'candidate','first_seen':'2026-11-08','last_seen':'2026-11-08','rooms':6,'buyer_commission_pct':3.57}
         self.seed['listings'] = [manual]
         self.path.write_text(json.dumps(self.seed))
         u.run(TODAY, self.transport, self.path)

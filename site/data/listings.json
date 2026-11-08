@@ -23,7 +23,9 @@
       "first_seen": "2026-11-08",
       "last_seen": "2026-11-08",
       "status": "candidate",
-      "absence_checks": 0
+      "absence_checks": 0,
+      "rooms": 7,
+      "year_built": 1933
     },
     {
       "id": "sparkasse-FID-F14-176-636",
@@ -46,7 +48,10 @@
       "first_seen": "2026-11-08",
       "last_seen": "2026-11-08",
       "absence_checks": 0,
-      "review": "manual"
+      "review": "manual",
+      "rooms": 6,
+      "year_built": 1979,
+      "buyer_commission_pct": 3.57
     },
     {
       "id": "sparkasse-FID-F14-188-646",
@@ -69,7 +74,8 @@
       "first_seen": "2026-11-08",
       "last_seen": "2026-11-08",
       "absence_checks": 0,
-      "review": "manual"
+      "review": "manual",
+      "rooms": 5
     }
   ]
 }

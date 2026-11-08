@@ -1,31 +1,35 @@
 <!doctype html>
-<html lang="en">
+<html lang="fr">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="light">
-  <meta name="description" content="A cautious, source-linked overview of house listings near the S1 corridor. Facts are indicative; location and garden require verification.">
+  <meta name="description" content="Maisons à explorer près du corridor S1, avec prix, surface habitable et terrain. Jardin utilisable, trajet à vélo et disponibilité restent à vérifier.">
   <meta name="referrer" content="no-referrer">
-  <title>S1 Hausradar · Houses along the line</title>
+  <title>S1 Hausradar · Des maisons à regarder de plus près</title>
   <link rel="stylesheet" href="./styles.css">
   <script src="./app.js" defer></script>
 </head>
 <body>
-<a class="skip" href="#listings">Skip to listings</a>
-<header class="masthead shell"><a href="./" class="wordmark" aria-label="S1 Hausradar home"><span class="signal" aria-hidden="true">S<span>1</span></span><span>HAUSRADAR</span></a><span class="mastnote">A smaller search, clearly sourced.</span></header>
+<a class="skip" href="#listings">Aller aux annonces</a>
+<header class="masthead shell"><a href="./" class="wordmark" aria-label="Accueil S1 Hausradar"><span class="signal" aria-hidden="true">S<span>1</span></span><span>HAUSRADAR</span></a><span class="mastnote">Des maisons, pas une liste infinie.</span></header>
 <main>
   <section class="hero shell" aria-labelledby="headline">
-    <div class="hero-copy"><p class="eyebrow">Independent property watch <span class="rule"></span> Greater Nuremberg</p><h1 id="headline">A home with<br><em>room to breathe.</em></h1><p class="lede">A deliberately narrow watch along the S1, from Erlangen towards Lauf. Only source-linked facts make the list; everything else stays a question.</p><a class="hero-link" href="#listings">Explore the watchlist <span aria-hidden="true">↘</span></a></div>
-    <div class="line-art" aria-hidden="true"><div class="line"><span class="stop stop-1"></span><span class="stop stop-2"></span><span class="stop stop-3"></span><span class="stop stop-4"></span></div><span class="place place-1">ERLANGEN</span><span class="place place-2">FÜRTH</span><span class="place place-3">NÜRNBERG</span><span class="place place-4">LAUF</span><span class="hero-axis">THE S1 CORRIDOR / NOT A TRAVEL-TIME MAP</span></div>
+    <div class="hero-copy">
+      <p class="eyebrow">Erlangen → Lauf · corridor S1</p>
+      <h1 id="headline">La maison vaut-elle <em>le clic&nbsp;?</em></h1>
+      <p class="lede">Prix, surface, terrain et type de maison : l’essentiel pour choisir quelles annonces ouvrir. Le jardin réellement utilisable et le trajet à vélo jusqu’à la S1 restent à vérifier.</p>
+      <a class="hero-link" href="#listings">Voir les maisons <span aria-hidden="true">↘</span></a>
+    </div>
+    <div class="hero-mark" aria-hidden="true"><span class="mark-sun"></span><span class="mark-ground"></span><span class="mark-house"><span class="mark-roof"></span><span class="mark-door"></span><span class="mark-window"></span></span><span class="mark-tree"></span><span class="mark-caption">UN POINT DE DÉPART, PAS UNE VISITE</span></div>
   </section>
-  <div class="band"><div class="shell band-inner"><span>THE SEARCH FRAME</span><span>Under €600k <b>·</b> 100–150 m² living area <b>·</b> Outdoor space to verify</span><span>01 / S1</span></div></div>
   <section id="listings" class="list-section shell" aria-labelledby="list-title">
-    <div class="section-heading"><div><p class="eyebrow">01 / The evidence</p><h2 id="list-title">The watchlist<span class="period">.</span></h2></div><p class="section-note">A lead is not a recommendation. Plot size is not usable garden area, and proximity is not a cycling-time estimate.</p></div>
-    <div class="toolbar"><div class="filters"><label for="status">Show</label><select id="status"><option value="current">Candidates</option><option value="all">All records</option><option value="archived">Archive</option></select><label for="city">City</label><select id="city"><option value="all">All cities</option></select></div><span id="count" role="status" aria-live="polite"></span></div>
-    <div id="state" class="state" role="status" aria-live="polite">Loading verified records…</div><div id="cards" class="cards" aria-live="polite"></div>
+    <div class="section-heading"><div><p class="eyebrow">À explorer</p><h2 id="list-title">Les maisons<span class="period">.</span></h2></div><p class="section-note">Une sélection partielle, qui peut dater. Vérifie les informations et la disponibilité sur l’annonce d’origine.</p></div>
+    <div class="toolbar"><div class="filters"><label for="status">Afficher</label><select id="status"><option value="current">À explorer</option><option value="all">Tout</option><option value="archived">Archives</option></select><label for="city">Ville</label><select id="city"><option value="all">Toutes les villes</option></select></div><span id="count" role="status" aria-live="polite">Chargement…</span></div>
+    <div id="state" class="state" role="status" aria-live="polite">Chargement des annonces…</div><div id="cards" class="cards"></div>
   </section>
-  <section class="method shell" aria-labelledby="method-title"><div><p class="eyebrow">02 / The method</p><h2 id="method-title">No invented certainty.</h2></div><div class="method-text"><p>Public listing facts are checked against their original pages. The link takes you to the source; no photos, listing prose, seller details, addresses or contact information are mirrored here.</p><p>“To verify” means observed on a source page, <strong>not</strong> guaranteed available. Automated Ohne-Makler entries are archived only after two explicit absent responses; manually checked Sparkasse entries remain candidates until reviewed again. Every listing still needs a human check of its actual garden, route to the station, costs and availability.</p></div></section>
+  <details class="method shell"><summary>Ce que ces annonces ne disent pas <span aria-hidden="true">+</span></summary><div class="method-text"><p>La surface du terrain ne mesure pas la surface de jardin utilisable. Ni le jardin, ni les minutes à vélo jusqu’à une gare S1, ni la disponibilité actuelle ne sont confirmés ici. Ces résultats sont partiels et peuvent être anciens.</p><p>Les informations affichées renvoient aux annonces d’origine. Vérifie les détails du bien, les frais et le trajet avant de prendre une décision.</p></div></details>
 </main>
-<footer class="footer shell"><span class="wordmark"><span class="signal small">S<span>1</span></span> HAUSRADAR</span><div><span id="updated">No verified update yet</span><span>·</span><a href="https://www.ohne-makler.net/robots.txt" target="_blank" rel="noopener noreferrer">Source access rules ↗</a></div></footer>
+<footer class="footer shell"><span class="wordmark"><span class="signal small" aria-hidden="true">S<span>1</span></span> HAUSRADAR</span><span id="updated">Date des données non disponible</span></footer>
 </body>
 </html>

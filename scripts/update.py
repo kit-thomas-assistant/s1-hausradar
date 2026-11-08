@@ -115,9 +115,13 @@ def parse_detail(html, url):
     plot_m2 = int(plot.group(1).replace('.', '')) if plot else None
     if plot_m2 is not None and plot_m2 < 250:
         return None  # A usable 250 m² garden cannot fit on a smaller plot.
+    rooms = re.search(r'\b(\d{1,2})\s+Zimmer\s+(\d{2,3})\s*m²\s+Wohnfläche\b', text)
+    built = re.search(r'\bBaujahr\s+((?:18|19|20)\d{2})\b', text)
     return {'id': 'ohne-makler-' + DETAIL.fullmatch(url).group(1), 'url': url, 'source': 'Ohne-Makler', 'city': city,
             'district': None, 'property_type': prop_type, 'price_eur': amount, 'living_area_m2': living,
             'plot_area_m2': plot_m2,
+            'rooms': int(rooms.group(1)) if rooms and int(rooms.group(2)) == living else None,
+            'year_built': int(built.group(1)) if built else None,
             'usable_garden_m2': None, 'bike_minutes_to_s1': None,
             'uncertainties': ['usable_garden_m2', 'bike_minutes_to_s1', 'availability']}
 
