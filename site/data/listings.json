@@ -1,0 +1,75 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-11-08",
+  "scan_state": "partial_sample",
+  "listings": [
+    {
+      "id": "ohne-makler-493283",
+      "url": "https://www.ohne-makler.net/immobilie/493283/",
+      "source": "Ohne-Makler",
+      "city": "Nürnberg",
+      "district": null,
+      "property_type": "Einfamilienhaus",
+      "price_eur": 549000,
+      "living_area_m2": 100,
+      "plot_area_m2": 540,
+      "usable_garden_m2": null,
+      "bike_minutes_to_s1": null,
+      "uncertainties": [
+        "usable_garden_m2",
+        "bike_minutes_to_s1",
+        "availability"
+      ],
+      "first_seen": "2026-11-08",
+      "last_seen": "2026-11-08",
+      "status": "candidate",
+      "absence_checks": 0
+    },
+    {
+      "id": "sparkasse-FID-F14-176-636",
+      "url": "https://immobilien.sparkasse.de/expose/FID-F14-176-636.html",
+      "source": "Sparkassen-Immobilien",
+      "city": "Röthenbach an der Pegnitz",
+      "district": null,
+      "property_type": "Einfamilienhaus",
+      "price_eur": 580000,
+      "living_area_m2": 125,
+      "plot_area_m2": null,
+      "usable_garden_m2": null,
+      "bike_minutes_to_s1": null,
+      "uncertainties": [
+        "usable_garden_m2",
+        "bike_minutes_to_s1",
+        "availability"
+      ],
+      "status": "candidate",
+      "first_seen": "2026-11-08",
+      "last_seen": "2026-11-08",
+      "absence_checks": 0,
+      "review": "manual"
+    },
+    {
+      "id": "sparkasse-FID-F14-188-646",
+      "url": "https://immobilien.sparkasse.de/expose/FID-F14-188-646.html",
+      "source": "Sparkassen-Immobilien",
+      "city": "Röthenbach an der Pegnitz",
+      "district": null,
+      "property_type": "Reihenendhaus",
+      "price_eur": 569000,
+      "living_area_m2": 120,
+      "plot_area_m2": null,
+      "usable_garden_m2": null,
+      "bike_minutes_to_s1": null,
+      "uncertainties": [
+        "usable_garden_m2",
+        "bike_minutes_to_s1",
+        "availability"
+      ],
+      "status": "candidate",
+      "first_seen": "2026-11-08",
+      "last_seen": "2026-11-08",
+      "absence_checks": 0,
+      "review": "manual"
+    }
+  ]
+}
