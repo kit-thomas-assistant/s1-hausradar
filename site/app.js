@@ -16,7 +16,8 @@ const houseType = type => types[type] || type || 'Type non indiqué';
 let records = [];
 function render(){
   const status = $('status').value, city = $('city').value;
-  const filtered = records.filter(r => (status === 'all' || (status === 'current' ? r.status === 'candidate' : r.status === 'archived')) && (city === 'all' || r.city === city));
+  const filtered = records.filter(r => (status === 'all' || (status === 'current' ? r.status === 'candidate' : r.status === 'archived')) && (city === 'all' || r.city === city))
+    .sort((a, b) => (Number.isFinite(a.price_eur) ? a.price_eur : Infinity) - (Number.isFinite(b.price_eur) ? b.price_eur : Infinity));
   $('count').textContent = `${filtered.length} ${filtered.length === 1 ? 'maison affichée' : 'maisons affichées'}`;
   $('state').hidden = filtered.length > 0;
   $('state').textContent = records.length ? 'Aucune maison pour ces filtres. Essaie une autre ville ou affiche les archives.' : 'Aucune annonce dans les données pour le moment. La recherche est partielle : cela ne veut pas dire qu’aucune maison ne correspond.';
